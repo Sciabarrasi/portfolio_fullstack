@@ -29,7 +29,7 @@ export type Experience = {
 
 export const experiences: Experience[] = [
   {
-    role: "Desarrollador Fullstack (Staffing)",
+    role: "Desarrollador Full Stack (Staffing)",
     company: "Crombie",
     client: "cliente: NFTYDoor",
     period: "Sep. 2025 – Jul. 2026",
@@ -41,7 +41,7 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    role: "Desarrollador Frontend (Freelance)",
+    role: "Desarrollador Full Stack (Freelance)",
     company: "Eduardo Chiozzi S.A.",
     client: "cliente: Eduardo Chiozzi S.A.",
     period: "Feb. 2024 – Jun. 2025",
