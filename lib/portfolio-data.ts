@@ -16,7 +16,7 @@ export const highlights = [
   { label: "Experiencia end-to-end", value: "Backend + Frontend" },
   { label: "Cloud", value: "AWS · GCP · Docker" },
   { label: "Metodología", value: "Scrum / Ágil" },
-  { label: "Inglés", value: "B2 certificado" },
+  { label: "Inglés", value: "B2" },
 ] as const
 
 export type Experience = {

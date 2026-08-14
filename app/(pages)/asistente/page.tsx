@@ -31,7 +31,6 @@ export default function AsistentePage() {
     setLoading(true)
 
     try {
-      // falta hacer esta integración
           const res = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
