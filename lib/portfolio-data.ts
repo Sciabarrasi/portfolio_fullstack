@@ -3,13 +3,13 @@ export const profile = {
   lastName: "Sciabarrasi",
   role: "Desarrollador Fullstack",
   location: "Argentina",
-  photo: "", //agregar una foto
+  photo: "/profile.jpg",
   initials: "GS",
   email: "sciabarrasi.gianluca@gmail.com",
   github: "https://github.com/Sciabarrasi",
   linkedin: "https://linkedin.com/in/gianluca-sciabarrasi",
   summary:
-    "Desarrollador Fullstack con experiencia práctica en todo el ciclo de vida del desarrollo de software — features, infraestructura cloud, QA manual y soporte técnico — adquirida trabajando bajo un modelo de staffing para clientes internacionales. Cómodo haciéndome cargo de una feature de extremo a extremo, desde la lógica de backend hasta la interfaz de usuario.",
+    "Desarrollador Fullstack con experiencia práctica en todo el ciclo de vida del desarrollo de software, desde desarrollo de features, infraestructura cloud, QA manual y soporte técnico. Mi experiencia fue adquirida trabajando de forma integral en el desarrollo y mantenimiento de aplicaciones, participando en la implementación de múltiples features y fixes, desde la lógica del backend hasta la interfaz de usuario.",
 } as const
 
 export const highlights = [
@@ -34,7 +34,7 @@ export const experiences: Experience[] = [
     client: "cliente: NFTYDoor",
     period: "Sep. 2025 – Jul. 2026",
     bullets: [
-      "Lideré la entrega end-to-end de una nueva feature: refactor de lógica legacy, definición de reglas de negocio, extensión del esquema de MongoDB y desarrollo del frontend en React / Next.js con TypeScript siguiendo diseños de Figma.",
+      "Desarrollé y mantuve múltiples features, fixes y refactors en React y Next.js con TypeScript y JavaScript, participando tanto en el desarrollo del frontend como en soluciones serverless para backend y trabajando con MongoDB como base de datos no relacional, siempre siguiendo los diseños y especificaciones definidios por el equipo de UX/UI en Figma.",
       "Trabajé bajo metodología ágil (Scrum) con sprints, dailies y demos con el cliente.",
       "Implementé y mantuve componentes basados en AWS (Cognito, Lambda, S3, CloudWatch) para autenticación, procesamiento serverless y monitoreo en producción.",
       "Detecté problemas antes del release mediante QA manual y actué como punto de contacto de Service Desk.",

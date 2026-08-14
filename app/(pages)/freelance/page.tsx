@@ -61,7 +61,7 @@ export default function FreelancePage() {
 
             {project.link && (
               <a
-                href={project.link}
+                href="https://github.com/Sciabarrasi/MPA_chiozzi"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline"
