@@ -1,45 +1,47 @@
-import { Analytics } from '@vercel/analytics/next';
-import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import { PortfolioNav } from "../components/portfolio-nav";
-import "./globals.css";
+import { Analytics } from "@vercel/analytics/next"
+import type { Metadata, Viewport } from "next"
+import { Bricolage_Grotesque, Geist, Geist_Mono } from "next/font/google"
+import { ChatProvider } from "@/components/chat/chat-provider"
+import "./globals.css"
 
-const geistSans = Geist({ subsets: ["latin"], variable: "--font-geist-sans" });
-const geistMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-geist-mono",
-});
+const geistSans = Geist({ subsets: ["latin"], variable: "--font-geist-sans" })
+const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono" })
+const bricolage = Bricolage_Grotesque({ subsets: ["latin"], variable: "--font-bricolage" })
+
+const siteUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
+  ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+  : "http://localhost:3000"
 
 export const metadata: Metadata = {
-  title: "Gianluca Sciabarrasi - Porfolio - Desarrollador Fullstack",
+  metadataBase: new URL(siteUrl),
+  title: "Gianluca Sciabarrasi — Software Engineer Full Stack",
   description:
-    "Portfolio de Gianluca Sciabarrasi, desarrollador Fullstack con experiencia en React, Next.js, TypeScript, NestJS y AWS.",
-};
+    "Portfolio de Gianluca Sciabarrasi, Software Engineer Full Stack en Santa Fe, Argentina. Sistemas a medida con React, Next.js, TypeScript, Node.js y AWS. Preguntale a su asistente IA.",
+  openGraph: {
+    title: "Gianluca Sciabarrasi — Software Engineer Full Stack",
+    description: "Construyo software que simplifica el día a día de quienes lo usan.",
+    images: ["/profile.jpg"],
+    locale: "es_AR",
+    type: "website",
+  },
+}
 
 export const viewport: Viewport = {
-  colorScheme: "light",
-  themeColor: "#ffffff",
-};
+  colorScheme: "dark",
+  themeColor: "#151b23",
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
-    <html
-      lang="es"
-      className={`bg-background ${geistSans.variable} ${geistMono.variable}`}
-    >
-      <body className="antialiased font-sans">
-        <PortfolioNav />
-        <div className="lg:pl-64">
-          <main className="mx-auto min-h-screen w-full max-w-4xl px-5 py-8 sm:px-8 sm:py-12">
-            {children}
-          </main>
-        </div>
+    <html lang="es" className={`${geistSans.variable} ${geistMono.variable} ${bricolage.variable}`}>
+      <body className="font-sans">
+        <ChatProvider>{children}</ChatProvider>
         {process.env.NODE_ENV === "production" && <Analytics />}
       </body>
     </html>
-  );
+  )
 }
